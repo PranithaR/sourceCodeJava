@@ -1,11 +1,16 @@
 <settings>
   <servers>
-  <server>
-    <id>nexus</id>
-    <username>admin</username>
+        <server>
+        <id>nexus</id>
+        <username>admin</username>
     <password>admin123</password>
     </server>
-</servers>
+        
+  </servers>
+  <activeProfiles>
+    <!--make the profile active all the time -->
+    <activeProfile>nexus</activeProfile>
+  </activeProfiles>
   <mirrors>
     <mirror>
       <!--This sends everything else to /public -->
