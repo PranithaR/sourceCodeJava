@@ -45,20 +45,20 @@
   
     <distributionManagement>
   <repository>
-    <id>s3repo-release</id>
+    <id>releases</id>
            <name>This is the repo for release snaps</name>
-    <url>s3://s3-artifactsrepo/release</url>
+    <url>http://localhost:8082/repository/maven-releases</url>
   </repository>
   <snapshotRepository>
-    <id>s3repo-snapshot</id>
-    <url>s3://s3-artifactsrepo/snapshot</url>
+    <id>snapshots</id>
+    <url>http://localhost:8082/repository/maven-snapshots</url>
   </snapshotRepository>
 </distributionManagement>
 <repositories>
     <repository>
-        <id>s3repo-release</id>
+        <id>releases</id>
            <name>This is the repo for release snaps</name>
-    <url>s3://s3-artifactsrepo/release</url>
+    <url>http://localhost:8082/repository/maven-releases</url>
         <releases>
 <enabled>true</enabled>
 </releases>
@@ -70,9 +70,9 @@
    </repositories>
 <pluginRepositories>
 <pluginRepository>
-<id>s3repo-release</id>
+<id>releases</id>
            <name>This is the repo for release snaps</name>
-    <url>s3://s3-artifactsrepo/release</url>
+    <url>http://localhost:8082/repository/maven-releases</url>
         <releases>
 <enabled>true</enabled>
 </releases>
