@@ -7,10 +7,7 @@
     </server>
         
   </servers>
-  <activeProfiles>
-    <!--make the profile active all the time -->
-    <activeProfile>nexus</activeProfile>
-  </activeProfiles>
+ 
   <mirrors>
     <mirror>
       <!--This sends everything else to /public -->
