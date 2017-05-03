@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" 
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instances"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 
                              http://maven.apache.org/maven-v4_0_0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <groupId>org.sonatype.mavenbook.multi</groupId>
   <artifactId>parent</artifactId>
-  <version>114.00</version>
+  <version>0.0.1-SNAPSHOT</version>
   <packaging>pom</packaging>
   <name>Multi Chapter Parent  Project</name>
   <modules>
@@ -22,13 +22,6 @@
    </properties>
   
 <build>
- <extensions>
- <extension>
-        <groupId>org.springframework.build</groupId>
-        <artifactId>aws-maven</artifactId>
-        <version>5.0.0.RELEASE</version>
-        </extension>
-</extensions>
     <pluginManagement>
     <plugins>
       <plugin>
@@ -100,7 +93,7 @@
         <configuration>
           
           <tagBase>
-           https://github.com/saikrishnama/ch-multi/tags
+           https://github.com/PranithaR/sourceCodeJava/tags
           </tagBase>
           
         </configuration>
@@ -110,19 +103,18 @@
   </build>	
    <distributionManagement>
   <repository>
-    <id>s3repo-release</id>
-           <name>This is the repo for release snaps</name>
-    <url>s3://s3-artifactsrepo/release</url>
+    <id>releases</id>
+    <url>http://127.0.0.1:8082/nexus/content/repositories/releases</url>
   </repository>
   <snapshotRepository>
-    <id>s3repo-snapshot</id>
-    <url>s3://s3-artifactsrepo/snapshot</url>
+    <id>snapshots</id>
+    <url>http://127.0.0.1:8082/nexus/content/repositories/snapshots</url>
   </snapshotRepository>
 </distributionManagement>
 <repositories>
     <repository>
-        <id>s3repo-release</id>
-        <url>s3://s3-artifactsrepo/release/</url>
+        <id>releases</id>
+        <url>http://127.0.0.1:8082/nexus/content/groups/public/</url>
         <releases>
 <enabled>true</enabled>
 </releases>
@@ -135,7 +127,7 @@
 <pluginRepositories>
 <pluginRepository>
 <id>releases</id>
-        <url>s3://s3-artifactsrepo/release/</url>
+        <url>http://127.0.0.1:8082/nexus/content/groups/public/</url>
         <releases>
 <enabled>true</enabled>
 </releases>
